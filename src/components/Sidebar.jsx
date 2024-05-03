@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaChartPie } from 'react-icons/fa6'
+import { sidebarLinks } from '../data/sidebarLinks'
 
 export default function Sidebar() {
   return (
@@ -12,6 +13,13 @@ export default function Sidebar() {
           </div>
           <h1 className="text-lg md:text-xl text-main font-bold">Dashnalytics</h1>
         </a>
+        <div className="flex flex-col">
+          {
+            sidebarLinks.map(el => (
+              <a key={el.id} href={el.link} className='flex gap-2 items-center rounded-md py-2 px-4 text-dark/80 bg-transparent hover:bg-primary hover:text-main'><span className="text-lg md:text-xl w-8 flex-shrink-0">{el.icon}</span>{el.title}</a>
+            ))
+          }
+        </div>
       </div>
     </nav>
     
