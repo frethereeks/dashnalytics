@@ -15,8 +15,8 @@ export const sidebarLinks = [
     },
     {
         id: "80252",
-        title: "Product",
-        link: "/product",
+        title: "Products",
+        link: "/products",
         icon: <FaBagShopping />,
     },
     {
